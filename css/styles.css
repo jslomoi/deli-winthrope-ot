@@ -750,6 +750,29 @@
 }
 
 /* ============================================================
+   Collaboration grid (services page)
+   ============================================================ */
+.collab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "top photo" "bottom photo";
+  column-gap: var(--space-16);
+  row-gap: 0;
+  align-items: start;
+}
+.collab-text-top { grid-area: top; }
+.collab-text-bottom { grid-area: bottom; }
+.collab-photo { grid-area: photo; align-self: center; }
+@media (max-width: 767px) {
+  .collab-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "top" "photo" "bottom";
+    gap: var(--space-6);
+  }
+  .collab-photo .photo-wrap { height: 280px; }
+}
+
+/* ============================================================
    Section defaults
    ============================================================ */
 .section {
