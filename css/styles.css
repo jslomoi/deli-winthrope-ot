@@ -657,11 +657,22 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: var(--space-12);
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "top photo" "bottom photo";
+  column-gap: var(--space-12);
+  row-gap: 0;
+  align-items: start;
 }
 .hero > * { position: relative; z-index: 1; }
 .hero .blob { position: absolute; z-index: 0; }
+.hero-text-top { grid-area: top; }
+.hero-text-bottom { grid-area: bottom; }
+.hero .mark-wrap {
+  grid-area: photo;
+  align-self: stretch;
+  display: block;
+  min-height: 340px;
+}
 .hero h1 {
   font-size: var(--text-display-l);
   line-height: var(--leading-display);
@@ -682,11 +693,6 @@
   gap: var(--space-3);
   flex-wrap: wrap;
 }
-.hero .mark-wrap {
-  align-self: stretch;
-  display: block;
-  min-height: 340px;
-}
 .hero-photo {
   height: 100%;
   min-height: 340px;
@@ -694,10 +700,53 @@
 @media (max-width: 767px) {
   .hero {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "top" "photo" "bottom";
     padding: var(--space-8) var(--space-6);
+    gap: var(--space-6);
+  }
+  .hero .mark-wrap { display: block; min-height: unset; }
+  .hero-photo { height: 260px; min-height: unset; }
+}
+
+/* ============================================================
+   About preview grid (homepage)
+   ============================================================ */
+.about-preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+.about-preview-photo .photo-wrap { height: 400px; }
+@media (max-width: 767px) {
+  .about-preview-grid {
+    grid-template-columns: 1fr;
     gap: var(--space-8);
   }
-  .hero .mark-wrap { display: none; }
+  .about-preview-photo { order: -1; }
+  .about-preview-photo .photo-wrap { height: 300px; }
+}
+
+/* ============================================================
+   About bio grid (about page)
+   ============================================================ */
+.about-bio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+.about-bio-photo {
+  position: sticky;
+  top: calc(var(--space-16) + var(--space-8));
+  padding-top: var(--space-10);
+}
+.about-bio-photo .photo-wrap { height: 440px; }
+@media (max-width: 767px) {
+  .about-bio-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+  .about-bio-photo { position: static; padding-top: 0; }
+  .about-bio-photo .photo-wrap { height: 320px; }
 }
 
 /* ============================================================
