@@ -1,0 +1,217 @@
+/* ============================================================
+   Deli Winthrope Occupational Therapy — design tokens
+   Drop this file into your CSS pipeline (e.g. import at the top
+   of your global stylesheet). Every variable below is the
+   canonical source of truth for the brand.
+   ============================================================ */
+
+:root {
+  /* ------------------------------------------------------------
+     Colour
+     ------------------------------------------------------------ */
+
+  /* Brand palette */
+  --periwinkle:       #7B8AE0;
+  --periwinkle-deep:  #5A6CC9;
+  --lilac:            #B7A5DB;
+  --lilac-soft:       #D6CCEE;
+  --rose:             #F2A8B8;
+  --coral:            #FFB293;   /* pebble accent — small use only, never as text */
+  --butter:           #FFE3A8;
+  --cream:            #FAF5EE;
+  --cream-2:          #F2EBDC;
+  --ink:              #2A2D5C;
+  --ink-soft:         #4A4F7A;
+  --white:            #FFFFFF;
+
+  /* Semantic tokens — prefer these in components */
+  --bg-page:          var(--cream);
+  --bg-subtle:        var(--cream-2);
+  --bg-surface:       var(--white);
+  --bg-bold:          var(--ink);
+  --bg-accent:        var(--periwinkle);
+
+  --text-primary:     var(--ink);
+  --text-muted:       var(--ink-soft);
+  --text-inverse:     var(--cream);
+  --text-link:        var(--periwinkle-deep);
+  --text-link-hover:  var(--ink);
+
+  --action-bg:        var(--periwinkle-deep);
+  --action-bg-hover:  var(--ink);
+  --action-text:      var(--cream);
+
+  --border-subtle:    var(--lilac-soft);
+  --border-focus:     var(--periwinkle-deep);
+
+  --pill-bg:          var(--butter);
+  --pill-text:        var(--ink);
+
+  /* ------------------------------------------------------------
+     Typography
+     ------------------------------------------------------------ */
+
+  /* Font stacks — Fredoka is the wordmark only and isn't used in
+     site CSS; the SVG logo carries it as outlined paths. */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                  Roboto, Helvetica, Arial, sans-serif;
+
+  /* Type scale — desktop. Override in @media for mobile. */
+  --text-display-xl:  4rem;     /* 64px */
+  --text-display-l:   3rem;     /* 48px */
+  --text-h1:          2.375rem; /* 38px */
+  --text-h2:          1.875rem; /* 30px */
+  --text-h3:          1.375rem; /* 22px */
+  --text-lead:        1.25rem;  /* 20px */
+  --text-body-l:      1.0625rem;/* 17px */
+  --text-body:        1rem;     /* 16px */
+  --text-body-s:      0.875rem; /* 14px */
+  --text-caption:     0.75rem;  /* 12px */
+  --text-eyebrow:     0.6875rem;/* 11px */
+  --text-button:      0.9375rem;/* 15px */
+
+  --leading-display:  1.06;
+  --leading-heading:  1.15;
+  --leading-body:     1.6;
+  --leading-tight:    1.4;
+
+  /* Variation settings for Fraunces */
+  --fraunces-display: 'opsz' 144, 'SOFT' 100, 'wght' 500;
+  --fraunces-heading: 'opsz' 144, 'SOFT' 100, 'wght' 500;
+  --fraunces-body:    'opsz' 9,   'SOFT' 100, 'wght' 500;
+  --fraunces-italic:  'opsz' 100, 'SOFT' 100, 'wght' 400;
+
+  /* ------------------------------------------------------------
+     Spacing — 8px base scale
+     ------------------------------------------------------------ */
+  --space-1:   0.25rem; /* 4 */
+  --space-2:   0.5rem;  /* 8 */
+  --space-3:   0.75rem; /* 12 */
+  --space-4:   1rem;    /* 16 */
+  --space-5:   1.25rem; /* 20 */
+  --space-6:   1.5rem;  /* 24 */
+  --space-8:   2rem;    /* 32 */
+  --space-10:  2.5rem;  /* 40 */
+  --space-12:  3rem;    /* 48 */
+  --space-16:  4rem;    /* 64 */
+  --space-20:  5rem;    /* 80 */
+  --space-24:  6rem;    /* 96 */
+  --space-32:  8rem;    /* 128 */
+
+  /* ------------------------------------------------------------
+     Layout
+     ------------------------------------------------------------ */
+  --container-reading: 680px;
+  --container-default: 1080px;
+  --container-wide:    1280px;
+
+  --page-padding-mobile:  var(--space-6);  /* 24 */
+  --page-padding-tablet:  var(--space-8);  /* 32 */
+  --page-padding-desktop: var(--space-12); /* 48 */
+
+  /* ------------------------------------------------------------
+     Radii
+     ------------------------------------------------------------ */
+  --radius-sm:   8px;
+  --radius-md:   14px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+  --radius-full: 999px;
+
+  /* ------------------------------------------------------------
+     Motion
+     ------------------------------------------------------------ */
+  --ease:        cubic-bezier(0.22, 0.61, 0.36, 1);
+  --duration-micro:  200ms;
+  --duration-macro:  360ms;
+
+  /* ------------------------------------------------------------
+     Shadows — used sparingly. The brand prefers colour over shadow.
+     ------------------------------------------------------------ */
+  --shadow-sm:  0 1px 0 rgba(42, 45, 92, 0.06);
+  --shadow-md:  0 6px 16px -8px rgba(42, 45, 92, 0.18);
+  --shadow-lg:  0 24px 48px -24px rgba(42, 45, 92, 0.18);
+}
+
+/* ------------------------------------------------------------
+   Mobile type scale
+   ------------------------------------------------------------ */
+@media (max-width: 767px) {
+  :root {
+    --text-display-xl: 2.75rem;  /* 44 */
+    --text-display-l:  2.125rem; /* 34 */
+    --text-h1:         1.75rem;  /* 28 */
+    --text-h2:         1.5rem;   /* 24 */
+    --text-h3:         1.1875rem;/* 19 */
+  }
+}
+
+/* ------------------------------------------------------------
+   Dark mode (optional — disabled by default; enable by adding
+   class="dark" to <html> if the brand later supports it)
+   ------------------------------------------------------------ */
+/*
+.dark {
+  --bg-page:        var(--ink);
+  --bg-subtle:      #1F2148;
+  --bg-surface:     #353A6E;
+  --text-primary:   var(--cream);
+  --text-muted:     var(--lilac-soft);
+  --text-link:      var(--lilac);
+  --border-subtle:  #4A4F7A;
+}
+*/
+
+/* ------------------------------------------------------------
+   Base typography reset — apply to body
+   ------------------------------------------------------------ */
+html {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--text-primary);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-variation-settings: var(--fraunces-heading);
+  font-weight: 500;
+  line-height: var(--leading-heading);
+  color: var(--text-primary);
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: var(--text-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+  transition: color var(--duration-micro) var(--ease);
+}
+a:hover { color: var(--text-link-hover); }
+
+:focus-visible {
+  outline: 3px solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ------------------------------------------------------------
+   Reduced motion
+   ------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
