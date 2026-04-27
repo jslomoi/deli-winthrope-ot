@@ -81,7 +81,10 @@
   .site-header-inner { padding-inline: var(--page-padding-tablet); }
 }
 @media (max-width: 767px) {
-  .site-header-inner { padding-inline: var(--page-padding-mobile); }
+  .site-header-inner {
+    padding-inline: var(--page-padding-mobile);
+    padding-block: var(--space-4);
+  }
 }
 /* ── Composed logo (mark + wordmark img + live credential text) ── */
 .logo {
