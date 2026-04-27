@@ -821,12 +821,16 @@
 .carousel--in-grid {
   height: 100%;
   min-height: 300px;
+  padding-bottom: var(--space-8);
 }
 .carousel--in-grid .carousel-track {
   height: 100%;
 }
 @media (max-width: 767px) {
-  .carousel--in-grid { min-height: 240px; }
+  .carousel--in-grid {
+    min-height: 240px;
+    padding-bottom: var(--space-6);
+  }
 }
 
 /* ============================================================
