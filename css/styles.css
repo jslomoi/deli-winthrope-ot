@@ -1254,6 +1254,11 @@
   align-items: center;
   gap: var(--space-4);
 }
+.site-footer .legal span {
+  font-size: var(--text-caption);
+  font-weight: 400;
+  line-height: 1;
+}
 
 /* ============================================================
    Privacy / long-form article styles
