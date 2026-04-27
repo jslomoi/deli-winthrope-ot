@@ -810,7 +810,7 @@
 @media (max-width: 767px) {
   .carousel--in-grid {
     min-height: 240px;
-    padding-bottom: var(--space-12);
+    padding-bottom: 0;
   }
 }
 
