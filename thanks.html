@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message sent · Deli Winthrope Occupational Therapy</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/logos/mark-on-periwinkle.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/logos/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" role="banner">
+  <div class="site-header-inner">
+    <a href="index.html" class="logo" aria-label="Deli Winthrope Occupational Therapy — home">
+      <img src="assets/logos/mark-color.svg" alt="" class="logo__mark">
+      <span class="logo__text">
+        <img src="assets/logos/wordmark-color.svg" alt="Deli Winthrope" class="logo__wordmark">
+        <span class="logo__credential">occupational therapy</span>
+      </span>
+    </a>
+    <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="fees.html">Fees</a>
+      <a href="contact.html" class="btn btn-primary nav-cta">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="container">
+    <div class="page-header" style="max-width:560px;">
+      <span class="eyebrow">Message sent</span>
+      <h1>Thanks for getting in touch</h1>
+      <p class="subtitle">Deli will be in touch via phone or email shortly to have a chat and see if this service is the right fit for your child.</p>
+      <div style="margin-top:var(--space-8);">
+        <a href="index.html" class="btn btn-secondary">Back to home</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="site-footer-inner">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo" aria-label="Deli Winthrope Occupational Therapy — home">
+          <img src="assets/logos/mark-on-ink.svg" alt="" class="logo__mark">
+          <span class="logo__text">
+            <img src="assets/logos/wordmark-cream.svg" alt="Deli Winthrope" class="logo__wordmark">
+            <span class="logo__credential">occupational therapy</span>
+          </span>
+        </a>
+        <p class="tagline">Helping families navigate big feelings, behaviour, and everyday challenges</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="fees.html">Fees</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="mailto:deli@winthropeot.com.au">deli@winthropeot.com.au</a></li>
+          <li><a href="tel:0452140373">0452 140 373</a></li>
+          <li>Melbourne, VIC</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Deli Winthrope Occupational Therapy</span>
+      <span>ABN 94 582 370 921</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('site-nav');
+  hamburger.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+    hamburger.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    hamburger.innerHTML = open
+      ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>'
+      : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>';
+  });
+</script>
+
+</body>
+</html>

@@ -60,7 +60,8 @@
 
         <!-- Intake form -->
         <div>
-          <form action="#" method="post" novalidate>
+          <form name="contact" method="post" data-netlify="true" action="/thanks.html" novalidate>
+            <input type="hidden" name="form-name" value="contact">
             <div class="field">
               <label for="client-name">Client's name <span class="req" aria-label="required">*</span></label>
               <input id="client-name" name="client_name" type="text" required>
