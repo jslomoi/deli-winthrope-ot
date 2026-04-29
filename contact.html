@@ -60,8 +60,10 @@
 
         <!-- Intake form -->
         <div>
-          <form name="contact" method="post" data-netlify="true" action="/thanks.html" novalidate>
-            <input type="hidden" name="form-name" value="contact">
+          <form method="POST" action="https://api.web3forms.com/submit" novalidate>
+            <input type="hidden" name="access_key" value="b7e563f3-f13d-4a79-a32d-5835a2c71dcb">
+            <input type="hidden" name="redirect" value="https://winthropeot.com.au/thanks.html">
+            <input type="hidden" name="subject" value="New contact form submission — Deli Winthrope OT">
             <div class="field">
               <label for="client-name">Client's name <span class="req" aria-label="required">*</span></label>
               <input id="client-name" name="client_name" type="text" required>
