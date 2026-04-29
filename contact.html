@@ -70,7 +70,7 @@
             </div>
 
             <div class="field">
-              <label for="client-age">Client age</label>
+              <label for="client-age">Client age <span class="req" aria-label="required">*</span></label>
               <input id="client-age" name="client_age" type="number" min="1" max="18" placeholder="e.g. 7">
             </div>
 
@@ -90,17 +90,17 @@
             </div>
 
             <div class="field">
-              <label for="location">Location</label>
+              <label for="location">Location <span class="req" aria-label="required">*</span></label>
               <input id="location" name="location" type="text" placeholder="e.g. Prahran, Malvern">
             </div>
 
             <div class="field">
-              <label for="story">Tell me a little about your child or your concerns</label>
+              <label for="story">Tell me a little about your child or your concerns <span class="req" aria-label="required">*</span></label>
               <textarea id="story" name="story" rows="5"></textarea>
             </div>
 
             <fieldset style="border:none;padding:0;margin:0 0 var(--space-8);">
-              <legend style="font-size:var(--text-body-s);font-weight:500;color:var(--text-primary);margin-bottom:var(--space-3);">Preferred contact method</legend>
+              <legend style="font-size:var(--text-body-s);font-weight:500;color:var(--text-primary);margin-bottom:var(--space-3);">Preferred contact method <span class="req" aria-label="required">*</span></legend>
               <div class="radio-group">
                 <label class="radio-option">
                   <input type="radio" name="contact_pref" value="email"> Email
